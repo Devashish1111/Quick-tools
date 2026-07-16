@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+    --primary: 220 90% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 20% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 90% 56%;
+    --radius: 0.625rem;
+
+    --qt-brand: #2563EB;
+    --qt-brand-hover: #1D4ED8;
+    --qt-bg: #FFFFFF;
+    --qt-bg-secondary: #F8FAFC;
+    --qt-bg-tertiary: #F1F5F9;
+    --qt-text: #0F172A;
+    --qt-text-secondary: #475569;
+    --qt-text-tertiary: #94A3B8;
+    --qt-border: #E2E8F0;
+    --qt-sidebar: #F8FAFC;
+    --qt-sidebar-active: #EFF6FF;
+    --qt-sidebar-active-border: #2563EB;
+    --qt-success: #10B981;
+    --qt-warning: #F59E0B;
+    --qt-error: #EF4444;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .qt-input {
+    @apply w-full px-4 py-3 rounded-lg border text-sm transition-all duration-200;
+    border-color: var(--qt-border);
+    background: white;
+    color: var(--qt-text);
+  }
+  .qt-input:focus {
+    @apply outline-none ring-2 ring-offset-1;
+    --tw-ring-color: var(--qt-brand);
+    border-color: var(--qt-brand);
+  }
+  .qt-input::placeholder {
+    color: var(--qt-text-tertiary);
+  }
+  .qt-textarea {
+    @apply w-full px-4 py-3 rounded-lg border text-sm transition-all duration-200 resize-none;
+    border-color: var(--qt-border);
+    background: white;
+    color: var(--qt-text);
+    min-height: 120px;
+  }
+  .qt-textarea:focus {
+    @apply outline-none ring-2 ring-offset-1;
+    --tw-ring-color: var(--qt-brand);
+    border-color: var(--qt-brand);
+  }
+  .qt-btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200;
+    background: var(--qt-brand);
+    color: white;
+  }
+  .qt-btn:hover {
+    background: var(--qt-brand-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  }
+  .qt-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 border;
+    background: white;
+    color: var(--qt-text);
+    border-color: var(--qt-border);
+  }
+  .qt-btn-secondary:hover {
+    background: var(--qt-bg-secondary);
+    border-color: var(--qt-text-tertiary);
+  }
+  .qt-btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+  .qt-card {
+    @apply rounded-xl border bg-white p-6;
+    border-color: var(--qt-border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .qt-card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+  }
+  .qt-label {
+    @apply block text-xs font-semibold uppercase tracking-wider mb-1.5;
+    color: var(--qt-text-secondary);
+  }
+  .qt-output {
+    @apply w-full px-4 py-3 rounded-lg text-sm font-mono;
+    background: var(--qt-bg-secondary);
+    color: var(--qt-text);
+    border: 1px solid var(--qt-border);
+  }
+  .qt-stat {
+    @apply text-center p-4 rounded-lg;
+    background: var(--qt-bg-secondary);
+  }
+  .qt-stat-value {
+    @apply text-2xl font-bold;
+    color: var(--qt-brand);
+  }
+  .qt-stat-label {
+    @apply text-xs mt-1;
+    color: var(--qt-text-secondary);
+  }
+  .ad-slot {
+    @apply flex items-center justify-center rounded-lg border border-dashed text-xs;
+    border-color: #CBD5E1;
+    background: #FEFCE8;
+    color: #94A3B8;
+    min-height: 90px;
+  }
+}
+
+@layer utilities {
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 2px;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
