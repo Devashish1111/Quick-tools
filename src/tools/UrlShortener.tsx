@@ -51,10 +51,10 @@ export default function UrlShortener() {
         {error && <p className="text-sm mt-2" style={{ color: 'var(--qt-error)' }}>{error}</p>}
       </div>
       {shortUrl && (
-        <div className="qt-card" style={{ background: '#F0FDF4', borderColor: '#86EFAC' }}>
+        <div className="qt-card" style={{ background: 'rgba(34,211,165,0.06)', borderColor: 'rgba(34,211,165,0.25)' }}>
           <p className="text-xs font-semibold uppercase mb-2" style={{ color: 'var(--qt-success)' }}>Shortened URL</p>
           <div className="flex items-center gap-3">
-            <a href={shortUrl} target="_blank" rel="noopener noreferrer" className="flex-1 font-mono text-sm truncate" style={{ color: 'var(--qt-brand)' }}>{shortUrl}</a>
+            <a href={shortUrl} target="_blank" rel="noopener noreferrer" className="flex-1 font-mono text-sm truncate" style={{ color: 'var(--qt-accent)' }}>{shortUrl}</a>
             <button onClick={copy} className="qt-btn qt-btn-sm">{copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}{copied ? 'Copied' : 'Copy'}</button>
             <a href={shortUrl} target="_blank" rel="noopener noreferrer" className="qt-btn-secondary qt-btn-sm"><ExternalLink className="w-3.5 h-3.5" /></a>
           </div>

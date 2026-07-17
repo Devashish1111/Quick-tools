@@ -2,7 +2,7 @@ import {
   Link2, QrCode, Lock, Type, FileText, Dices,
   Code, Fingerprint, Clock, Hash, Percent, Calculator,
   Calendar, Weight, Palette, Image, Sparkles, SlidersHorizontal,
-  FileJson, Crosshair, ShieldCheck
+  FileJson, Crosshair, ShieldCheck, FileCode, Globe, Timer, Terminal
 } from 'lucide-react';
 import { lazy } from 'react';
 
@@ -22,16 +22,16 @@ export interface ToolCategory {
 }
 
 export const categories: ToolCategory[] = [
-  { id: 'web', name: 'Web Tools', icon: Link2 },
-  { id: 'text', name: 'Text & Writing', icon: FileText },
-  { id: 'developer', name: 'Developer', icon: Code },
-  { id: 'security', name: 'Security', icon: ShieldCheck },
-  { id: 'calculators', name: 'Calculators', icon: Calculator },
-  { id: 'utilities', name: 'Utilities', icon: SlidersHorizontal },
+  { id: 'web',         name: 'Web Tools',      icon: Link2 },
+  { id: 'text',        name: 'Text & Writing',  icon: FileText },
+  { id: 'developer',   name: 'Developer',       icon: Code },
+  { id: 'security',    name: 'Security',        icon: ShieldCheck },
+  { id: 'calculators', name: 'Calculators',     icon: Calculator },
+  { id: 'utilities',   name: 'Utilities',       icon: SlidersHorizontal },
 ];
 
 export const tools: ToolConfig[] = [
-  // Web Tools
+  // ── Web Tools ────────────────────────────────────────────
   {
     id: 'url-shortener',
     name: 'URL Shortener',
@@ -48,8 +48,16 @@ export const tools: ToolConfig[] = [
     category: 'web',
     component: lazy(() => import('./QrCodeGenerator')),
   },
+  {
+    id: 'ip-info',
+    name: 'IP Info Lookup',
+    description: 'Look up geolocation, ISP, and network info for any IP address.',
+    icon: Globe,
+    category: 'web',
+    component: lazy(() => import('./IpInfoLookup')),
+  },
 
-  // Text & Writing
+  // ── Text & Writing ────────────────────────────────────────
   {
     id: 'case-converter',
     name: 'Case Converter',
@@ -90,8 +98,16 @@ export const tools: ToolConfig[] = [
     category: 'text',
     component: lazy(() => import('./Base64Tool')),
   },
+  {
+    id: 'markdown-preview',
+    name: 'Markdown Preview',
+    description: 'Write Markdown and see a live rendered HTML preview side by side.',
+    icon: FileCode,
+    category: 'text',
+    component: lazy(() => import('./MarkdownPreview')),
+  },
 
-  // Developer
+  // ── Developer ────────────────────────────────────────────
   {
     id: 'json-formatter',
     name: 'JSON Formatter',
@@ -124,8 +140,16 @@ export const tools: ToolConfig[] = [
     category: 'developer',
     component: lazy(() => import('./HashGenerator')),
   },
+  {
+    id: 'regex-tester',
+    name: 'Regex Tester',
+    description: 'Test regular expressions against strings with real-time match highlighting.',
+    icon: Terminal,
+    category: 'developer',
+    component: lazy(() => import('./RegexTester')),
+  },
 
-  // Security
+  // ── Security ────────────────────────────────────────────
   {
     id: 'password-generator',
     name: 'Password Generator',
@@ -135,7 +159,7 @@ export const tools: ToolConfig[] = [
     component: lazy(() => import('./PasswordGenerator')),
   },
 
-  // Calculators
+  // ── Calculators ──────────────────────────────────────────
   {
     id: 'percentage-calculator',
     name: 'Percentage Calculator',
@@ -177,7 +201,7 @@ export const tools: ToolConfig[] = [
     component: lazy(() => import('./UnitConverter')),
   },
 
-  // Utilities
+  // ── Utilities ────────────────────────────────────────────
   {
     id: 'color-converter',
     name: 'Color Converter',
@@ -193,5 +217,21 @@ export const tools: ToolConfig[] = [
     icon: Image,
     category: 'utilities',
     component: lazy(() => import('./ImageToBase64')),
+  },
+  {
+    id: 'css-gradient',
+    name: 'CSS Gradient Generator',
+    description: 'Build beautiful CSS gradients visually and copy the code instantly.',
+    icon: Palette,
+    category: 'utilities',
+    component: lazy(() => import('./CssGradientGenerator')),
+  },
+  {
+    id: 'pomodoro',
+    name: 'Pomodoro Timer',
+    description: 'Stay focused with customizable Pomodoro work and break intervals.',
+    icon: Timer,
+    category: 'utilities',
+    component: lazy(() => import('./PomodoroTimer')),
   },
 ];

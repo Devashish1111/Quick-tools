@@ -32,17 +32,17 @@ export default function PasswordGenerator() {
 
   const strength = () => {
     let s = 0; if (upper) s++; if (lower) s++; if (numbers) s++; if (symbols) s++;
-    if (length >= 20 && s >= 3) return { label: 'Very Strong', color: '#059669', width: '100%' };
-    if (length >= 12 && s >= 3) return { label: 'Strong', color: '#10B981', width: '80%' };
-    if (length >= 10 && s >= 2) return { label: 'Medium', color: '#F59E0B', width: '60%' };
-    return { label: 'Weak', color: '#EF4444', width: '40%' };
+    if (length >= 20 && s >= 3) return { label: 'Very Strong', color: 'var(--qt-accent)', width: '100%' };
+    if (length >= 12 && s >= 3) return { label: 'Strong', color: 'var(--qt-success)', width: '80%' };
+    if (length >= 10 && s >= 2) return { label: 'Medium', color: 'var(--qt-warning)', width: '60%' };
+    return { label: 'Weak', color: 'var(--qt-error)', width: '40%' };
   };
 
   const st = strength();
 
   return (
     <div className="max-w-xl mx-auto space-y-5 animate-fade-in">
-      <div className="qt-card text-center">
+      <div className="qt-card text-center" style={{ background: 'rgba(200,255,0,0.04)', borderColor: 'rgba(200,255,0,0.15)' }}>
         <code className="text-lg font-mono break-all">{password}</code>
         <div className="mt-3 flex items-center justify-center gap-3">
           <button onClick={copy} className="qt-btn qt-btn-sm">{copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}{copied ? 'Copied' : 'Copy'}</button>
@@ -52,10 +52,10 @@ export default function PasswordGenerator() {
 
       <div>
         <div className="flex items-center justify-between mb-2">
-          <label className="qt-label !mb-0">Length: <span className="font-bold ml-1" style={{ color: 'var(--qt-brand)' }}>{length}</span></label>
+          <label className="qt-label !mb-0">Length: <span className="font-bold ml-1" style={{ color: 'var(--qt-accent)' }}>{length}</span></label>
         </div>
-        <input type="range" min={6} max={64} value={length} onChange={e => setLength(Number(e.target.value))} className="w-full accent-blue-600" />
-        <div className="mt-2 h-1.5 rounded-full overflow-hidden" style={{ background: '#E2E8F0' }}>
+        <input type="range" min={6} max={64} value={length} onChange={e => setLength(Number(e.target.value))} className="qt-range" />
+        <div className="mt-2 h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
           <div className="h-full transition-all duration-300" style={{ width: st.width, background: st.color }} />
         </div>
         <p className="text-xs mt-1 font-medium" style={{ color: st.color }}>{st.label}</p>
@@ -63,8 +63,8 @@ export default function PasswordGenerator() {
 
       <div className="grid grid-cols-2 gap-3">
         {[{ label: 'Uppercase (A-Z)', checked: upper, onChange: setUpper }, { label: 'Lowercase (a-z)', checked: lower, onChange: setLower }, { label: 'Numbers (0-9)', checked: numbers, onChange: setNumbers }, { label: 'Symbols (!@#)', checked: symbols, onChange: setSymbols }].map(opt => (
-          <label key={opt.label} className="flex items-center gap-2.5 p-3 rounded-lg cursor-pointer transition-colors" style={{ background: 'var(--qt-bg-secondary)' }}>
-            <input type="checkbox" checked={opt.checked} onChange={e => opt.onChange(e.target.checked)} className="w-4 h-4 rounded accent-blue-600" />
+          <label key={opt.label} className="flex items-center gap-2.5 p-3 rounded-xl cursor-pointer transition-all duration-200" style={{ background: opt.checked ? 'rgba(200,255,0,0.06)' : 'rgba(255,255,255,0.04)', border: opt.checked ? '1px solid rgba(200,255,0,0.2)' : '1px solid rgba(255,255,255,0.07)' }}>
+            <input type="checkbox" checked={opt.checked} onChange={e => opt.onChange(e.target.checked)} className="qt-checkbox" />
             <span className="text-sm" style={{ color: 'var(--qt-text)' }}>{opt.label}</span>
           </label>
         ))}
