@@ -1,4 +1,5 @@
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router';
 import { Menu, Zap, Github } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import { tools } from './tools/toolsConfig';
@@ -57,17 +58,41 @@ const directComponents: Record<string, React.ComponentType> = {
 };
 
 export default function App() {
-  const [activeToolId, setActiveToolId] = useState('url-shortener');
+  const { toolId } = useParams<{ toolId: string }>();
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const activeTool = tools.find(t => t.id === activeToolId) || tools[0];
+  const activeTool = tools.find(t => t.id === toolId) || tools[0];
+  const activeToolId = activeTool.id;
+
+  // Dynamic SEO for active tool
+  useEffect(() => {
+    document.title = `${activeTool.name} — QuickToolbox Free Online Tool`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', activeTool.description);
+    }
+  }, [activeTool]);
+
+  // Redirect if URL has invalid tool ID
+  useEffect(() => {
+    if (toolId !== activeToolId) {
+      navigate(`/tools/${activeToolId}`, { replace: true });
+    }
+  }, [toolId, activeToolId, navigate]);
+
+  const handleSelectTool = (id: string) => {
+    navigate(`/tools/${id}`);
+    setSidebarOpen(false);
+  };
+
   const ActiveComponent = directComponents[activeToolId];
 
   return (
     <div className="flex h-screen overflow-hidden" style={{ background: 'var(--qt-bg)' }}>
       <Sidebar
         activeTool={activeToolId}
-        onSelectTool={setActiveToolId}
+        onSelectTool={handleSelectTool}
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
       />

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 import Home from './pages/Home.tsx'
@@ -21,7 +21,8 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/app" element={<App />} />
+        <Route path="/app" element={<Navigate to="/tools/url-shortener" replace />} />
+        <Route path="/tools/:toolId" element={<App />} />
         <Route path="/blog" element={<ComingSoon title="Blog" />} />
         <Route path="/blog/:slug" element={<ComingSoon title="Blog Article" />} />
         <Route path="/premium" element={<ComingSoon title="Premium" />} />

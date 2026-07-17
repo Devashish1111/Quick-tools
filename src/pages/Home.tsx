@@ -1,17 +1,25 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router';
 import {
   Zap, Shield, Smartphone, ArrowRight, Github,
-  Link2, QrCode, Lock, Type, FileText, Code, Hash,
-  Clock, Calculator, Palette, Image, Sparkles,
-  Globe, Terminal, Timer, Menu, X, FileCode,
-  CheckCircle, ArrowUpRight, ChevronRight
+  Menu, X, CheckCircle, ArrowUpRight, ChevronRight
 } from 'lucide-react';
 import { blogPosts } from '../data/blogs';
+import { tools as allTools } from '../tools/toolsConfig';
 
 /* ═══════════════════════════════════════════════════════
    MAGNETIC CUSTOM CURSOR
 ═══════════════════════════════════════════════════════ */
 function CustomCursor() {
+  // Reset SEO to home page values on mount
+  useEffect(() => {
+    document.title = "QuickToolbox — 25 Free Online Tools for Developers & Designers";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', "25 free browser tools: URL shortener, QR code generator, password generator, JSON formatter, regex tester, markdown preview, and more. Instant, private, no signup required.");
+    }
+  }, []);
+
   const dotRef  = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const mouse   = useRef({ x: -200, y: -200 });
@@ -161,34 +169,6 @@ function useParallax(speed = 0.3) {
 /* ═══════════════════════════════════════════════════════
    DATA
 ═══════════════════════════════════════════════════════ */
-const allTools = [
-  { icon: Link2,      name: 'URL Shortener',       cat: 'Web' },
-  { icon: QrCode,     name: 'QR Code Generator',   cat: 'Web' },
-  { icon: Lock,       name: 'Password Generator',  cat: 'Security' },
-  { icon: Type,       name: 'Case Converter',      cat: 'Text' },
-  { icon: FileText,   name: 'Word Counter',         cat: 'Text' },
-  { icon: Sparkles,   name: 'Lorem Ipsum',          cat: 'Text' },
-  { icon: Hash,       name: 'Text to Slug',         cat: 'Text' },
-  { icon: Code,       name: 'Base64 Encode/Decode', cat: 'Dev' },
-  { icon: Code,       name: 'JSON Formatter',       cat: 'Dev' },
-  { icon: Hash,       name: 'UUID Generator',       cat: 'Dev' },
-  { icon: Clock,      name: 'Timestamp Converter',  cat: 'Dev' },
-  { icon: Hash,       name: 'Hash Generator',       cat: 'Dev' },
-  { icon: Calculator, name: 'Percentage Calc',      cat: 'Math' },
-  { icon: Sparkles,   name: 'Random Number',        cat: 'Math' },
-  { icon: Clock,      name: 'Age Calculator',       cat: 'Math' },
-  { icon: Calculator, name: 'BMI Calculator',       cat: 'Math' },
-  { icon: Calculator, name: 'Unit Converter',       cat: 'Math' },
-  { icon: Palette,    name: 'Color Converter',      cat: 'Design' },
-  { icon: Image,      name: 'Image to Base64',      cat: 'Utils' },
-  { icon: FileCode,   name: 'Markdown Preview',     cat: 'Dev' },
-  { icon: Palette,    name: 'CSS Gradient Gen',     cat: 'Design' },
-  { icon: Terminal,   name: 'Regex Tester',         cat: 'Dev' },
-  { icon: Globe,      name: 'IP Info Lookup',       cat: 'Web' },
-  { icon: Timer,      name: 'Pomodoro Timer',       cat: 'Utils' },
-  { icon: Smartphone, name: 'More Coming',          cat: '...' },
-];
-
 const featuredTools = allTools.slice(0, 3);
 
 /* ═══════════════════════════════════════════════════════
@@ -514,7 +494,7 @@ export default function Home() {
               {featuredTools.map((tool, i) => {
                 const Icon = tool.icon;
                 return (
-                  <a key={i} href="/app" data-reveal="scale" data-delay={String(i)}
+                  <Link key={i} to={`/tools/${tool.id}`} data-reveal="scale" data-delay={String(i)}
                     className="group block no-underline p-8 rounded-2xl relative overflow-hidden"
                     style={{
                       background: '#111119',
@@ -540,7 +520,7 @@ export default function Home() {
                       <Icon className="w-6 h-6" style={{ color: 'var(--qt-accent)' }} />
                     </div>
                     <p className="text-[10px] font-black uppercase tracking-widest mb-2"
-                      style={{ color: 'var(--qt-text-muted)', letterSpacing: '0.15em' }}>{tool.cat}</p>
+                      style={{ color: 'var(--qt-text-muted)', letterSpacing: '0.15em' }}>{tool.category}</p>
                     <h3 className="text-xl font-bold font-display mb-3" style={{ color: 'var(--qt-text)', letterSpacing: '-0.02em' }}>
                       {tool.name}
                     </h3>
@@ -548,7 +528,7 @@ export default function Home() {
                       style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
                       <ArrowUpRight className="w-3.5 h-3.5" style={{ color: 'var(--qt-text-muted)' }} />
                     </div>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -558,7 +538,7 @@ export default function Home() {
               {allTools.slice(3).map((tool, i) => {
                 const Icon = tool.icon;
                 return (
-                  <a key={i} href="/app" data-reveal="scale" data-delay={String(i % 5)}
+                  <Link key={i} to={`/tools/${tool.id}`} data-reveal="scale" data-delay={String(i % 5)}
                     className="group flex items-center gap-2.5 p-4 rounded-xl no-underline transition-all duration-300"
                     style={{
                       background: '#111119',
@@ -576,7 +556,7 @@ export default function Home() {
                   >
                     <Icon className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--qt-accent)', opacity: 0.7 }} />
                     <span className="text-xs font-medium leading-snug" style={{ color: 'var(--qt-text-secondary)' }}>{tool.name}</span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
