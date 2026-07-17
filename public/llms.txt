@@ -1,0 +1,20 @@
+# QuickToolbox
+
+> The fastest, most reliable toolbox on the web.
+
+## About
+QuickToolbox provides 25+ browser-side tools spanning Text, Network, Conversion, Generators, and Crypto. 
+Everything is extremely fast and privacy-first.
+
+## Tools Overview
+- URL Shortener
+- Strong Password Generator
+- Image Resizer
+- IP Info Lookup
+- QR Code Generator
+- And many more...
+
+## Additional Resources
+- [Home Page](/)
+- [All Tools](/tools)
+- [Blog](/blog)

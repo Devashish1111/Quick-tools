@@ -329,6 +329,7 @@ export default function Home() {
             </div>
 
             <button className="md:hidden p-2 rounded-lg" style={{ color: 'var(--qt-text-secondary)' }}
+              aria-label="Toggle mobile menu"
               onClick={() => setMobile(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

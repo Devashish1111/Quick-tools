@@ -21,8 +21,8 @@
 
     --qt-text:          #F0F0FF;
     --qt-text-secondary:#A0A0C0;
-    --qt-text-tertiary: #606080;
-    --qt-text-muted:    #3A3A5A;
+    --qt-text-tertiary: #8080A0;
+    --qt-text-muted:    #7A7A9A;
 
     --qt-border:        rgba(255, 255, 255, 0.07);
     --qt-border-hover:  rgba(255, 255, 255, 0.15);
