@@ -4,7 +4,6 @@ import {
   Calendar, Weight, Palette, Image, Sparkles, SlidersHorizontal,
   FileJson, Crosshair, ShieldCheck, FileCode, Globe, Timer, Terminal
 } from 'lucide-react';
-import { lazy } from 'react';
 
 export interface ToolConfig {
   id: string;
@@ -12,7 +11,6 @@ export interface ToolConfig {
   description: string;
   icon: React.ElementType;
   category: string;
-  component: React.LazyExoticComponent<React.ComponentType>;
 }
 
 export interface ToolCategory {
@@ -31,14 +29,13 @@ export const categories: ToolCategory[] = [
 ];
 
 export const tools: ToolConfig[] = [
-  // ── Web Tools ────────────────────────────────────────────
+  // -- Web Tools --------------------------------------------
   {
     id: 'url-shortener',
     name: 'URL Shortener',
     description: 'Paste a long URL and get a clean, shareable short link instantly.',
     icon: Link2,
     category: 'web',
-    component: lazy(() => import('./UrlShortener')),
   },
   {
     id: 'qr-code',
@@ -46,7 +43,6 @@ export const tools: ToolConfig[] = [
     description: 'Enter any text or URL to generate a scannable QR code with download.',
     icon: QrCode,
     category: 'web',
-    component: lazy(() => import('./QrCodeGenerator')),
   },
   {
     id: 'ip-info',
@@ -54,17 +50,15 @@ export const tools: ToolConfig[] = [
     description: 'Look up geolocation, ISP, and network info for any IP address.',
     icon: Globe,
     category: 'web',
-    component: lazy(() => import('./IpInfoLookup')),
   },
 
-  // ── Text & Writing ────────────────────────────────────────
+  // -- Text & Writing ----------------------------------------
   {
     id: 'case-converter',
     name: 'Case Converter',
     description: 'Transform text between uppercase, lowercase, title case, camelCase, and snake_case.',
     icon: Type,
     category: 'text',
-    component: lazy(() => import('./CaseConverter')),
   },
   {
     id: 'word-counter',
@@ -72,7 +66,6 @@ export const tools: ToolConfig[] = [
     description: 'Count words, characters, sentences, paragraphs, and estimate reading time.',
     icon: FileText,
     category: 'text',
-    component: lazy(() => import('./WordCounter')),
   },
   {
     id: 'lorem-ipsum',
@@ -80,7 +73,6 @@ export const tools: ToolConfig[] = [
     description: 'Generate placeholder text for your designs and prototypes.',
     icon: Sparkles,
     category: 'text',
-    component: lazy(() => import('./LoremIpsum')),
   },
   {
     id: 'text-slug',
@@ -88,7 +80,6 @@ export const tools: ToolConfig[] = [
     description: 'Convert any text into a clean, URL-friendly slug format.',
     icon: Hash,
     category: 'text',
-    component: lazy(() => import('./TextToSlug')),
   },
   {
     id: 'base64',
@@ -96,7 +87,6 @@ export const tools: ToolConfig[] = [
     description: 'Encode text to Base64 or decode Base64 back to readable text.',
     icon: Code,
     category: 'text',
-    component: lazy(() => import('./Base64Tool')),
   },
   {
     id: 'markdown-preview',
@@ -104,17 +94,15 @@ export const tools: ToolConfig[] = [
     description: 'Write Markdown and see a live rendered HTML preview side by side.',
     icon: FileCode,
     category: 'text',
-    component: lazy(() => import('./MarkdownPreview')),
   },
 
-  // ── Developer ────────────────────────────────────────────
+  // -- Developer --------------------------------------------
   {
     id: 'json-formatter',
     name: 'JSON Formatter',
     description: 'Beautify, minify, and validate JSON data with syntax highlighting.',
     icon: FileJson,
     category: 'developer',
-    component: lazy(() => import('./JsonFormatter')),
   },
   {
     id: 'uuid-generator',
@@ -122,7 +110,6 @@ export const tools: ToolConfig[] = [
     description: 'Generate random UUID v4 identifiers for your applications.',
     icon: Fingerprint,
     category: 'developer',
-    component: lazy(() => import('./UuidGenerator')),
   },
   {
     id: 'timestamp-converter',
@@ -130,7 +117,6 @@ export const tools: ToolConfig[] = [
     description: 'Convert between Unix timestamps and human-readable dates.',
     icon: Clock,
     category: 'developer',
-    component: lazy(() => import('./TimestampConverter')),
   },
   {
     id: 'hash-generator',
@@ -138,7 +124,6 @@ export const tools: ToolConfig[] = [
     description: 'Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from any text.',
     icon: Hash,
     category: 'developer',
-    component: lazy(() => import('./HashGenerator')),
   },
   {
     id: 'regex-tester',
@@ -146,27 +131,24 @@ export const tools: ToolConfig[] = [
     description: 'Test regular expressions against strings with real-time match highlighting.',
     icon: Terminal,
     category: 'developer',
-    component: lazy(() => import('./RegexTester')),
   },
 
-  // ── Security ────────────────────────────────────────────
+  // -- Security --------------------------------------------
   {
     id: 'password-generator',
     name: 'Password Generator',
     description: 'Create strong, secure passwords with custom length and character options.',
     icon: Lock,
     category: 'security',
-    component: lazy(() => import('./PasswordGenerator')),
   },
 
-  // ── Calculators ──────────────────────────────────────────
+  // -- Calculators ------------------------------------------
   {
     id: 'percentage-calculator',
     name: 'Percentage Calculator',
     description: 'Calculate percentages, percentage change, and what-percent-of questions.',
     icon: Percent,
     category: 'calculators',
-    component: lazy(() => import('./PercentageCalculator')),
   },
   {
     id: 'random-number',
@@ -174,7 +156,6 @@ export const tools: ToolConfig[] = [
     description: 'Generate random integers or floats within your specified range.',
     icon: Dices,
     category: 'calculators',
-    component: lazy(() => import('./RandomNumber')),
   },
   {
     id: 'age-calculator',
@@ -182,7 +163,6 @@ export const tools: ToolConfig[] = [
     description: 'Calculate exact age in years, months, and days from a birthdate.',
     icon: Calendar,
     category: 'calculators',
-    component: lazy(() => import('./AgeCalculator')),
   },
   {
     id: 'bmi-calculator',
@@ -190,7 +170,6 @@ export const tools: ToolConfig[] = [
     description: 'Calculate Body Mass Index with health category interpretation.',
     icon: Weight,
     category: 'calculators',
-    component: lazy(() => import('./BmiCalculator')),
   },
   {
     id: 'unit-converter',
@@ -198,17 +177,15 @@ export const tools: ToolConfig[] = [
     description: 'Convert between length, weight, temperature, and digital storage units.',
     icon: Crosshair,
     category: 'calculators',
-    component: lazy(() => import('./UnitConverter')),
   },
 
-  // ── Utilities ────────────────────────────────────────────
+  // -- Utilities --------------------------------------------
   {
     id: 'color-converter',
     name: 'Color Converter',
     description: 'Convert between HEX, RGB, and HSL color formats with live preview.',
     icon: Palette,
     category: 'utilities',
-    component: lazy(() => import('./ColorConverter')),
   },
   {
     id: 'image-to-base64',
@@ -216,7 +193,6 @@ export const tools: ToolConfig[] = [
     description: 'Convert any image file to a Base64 data URL right in your browser.',
     icon: Image,
     category: 'utilities',
-    component: lazy(() => import('./ImageToBase64')),
   },
   {
     id: 'css-gradient',
@@ -224,7 +200,6 @@ export const tools: ToolConfig[] = [
     description: 'Build beautiful CSS gradients visually and copy the code instantly.',
     icon: Palette,
     category: 'utilities',
-    component: lazy(() => import('./CssGradientGenerator')),
   },
   {
     id: 'pomodoro',
@@ -232,6 +207,5 @@ export const tools: ToolConfig[] = [
     description: 'Stay focused with customizable Pomodoro work and break intervals.',
     icon: Timer,
     category: 'utilities',
-    component: lazy(() => import('./PomodoroTimer')),
   },
 ];

@@ -1,3 +1,4 @@
+'use client';
 import { useState, useRef, useCallback } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 import { Download, Loader2 } from 'lucide-react';

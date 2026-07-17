@@ -1,3 +1,4 @@
+'use client';
 import { useState, useCallback } from 'react';
 import { Link2, Loader2, Copy, Check, ExternalLink } from 'lucide-react';
 
@@ -19,19 +20,27 @@ export default function UrlShortener() {
     let target = url.trim();
     if (!target.startsWith('http')) target = 'https://' + target;
     if (!isValidUrl(target)) { setError('Please enter a valid URL'); return; }
+    
     setLoading(true);
     try {
-      const res = await fetch(`https://is.gd/create.php?format=simple&url=${encodeURIComponent(target)}`);
-      const text = await res.text();
-      if (text.startsWith('http')) { setShortUrl(text.trim()); }
-      else {
-        const fb = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(target)}`);
-        const fbText = await fb.text();
-        if (fbText.startsWith('http')) setShortUrl(fbText.trim());
-        else setError('Failed to shorten URL. Please try again.');
+      const res = await fetch('/api/shorten', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: target })
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        setError(data.error || 'Failed to shorten URL');
+      } else {
+        setShortUrl(data.shortUrl);
       }
-    } catch { setError('Network error. Please check your connection.'); }
-    finally { setLoading(false); }
+    } catch {
+      setError('Network error. Please check your connection.');
+    } finally {
+      setLoading(false);
+    }
   }, [url]);
 
   const copy = async () => {

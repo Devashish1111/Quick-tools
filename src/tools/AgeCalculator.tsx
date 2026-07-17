@@ -1,3 +1,4 @@
+'use client';
 import { useState, useMemo } from 'react';
 import { Calendar } from 'lucide-react';
 

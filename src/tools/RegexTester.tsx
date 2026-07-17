@@ -1,3 +1,4 @@
+'use client';
 import { useState, useMemo } from 'react';
 import { Copy, Check, AlertCircle, CheckCircle2 } from 'lucide-react';
 

@@ -1,3 +1,4 @@
+'use client';
 import { useState, useMemo } from 'react';
 import { Copy, Check, Eye, Code2 } from 'lucide-react';
 

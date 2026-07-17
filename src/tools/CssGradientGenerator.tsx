@@ -1,3 +1,4 @@
+'use client';
 import { useState, useCallback } from 'react';
 import { Copy, Check, RefreshCw, Plus, Trash2 } from 'lucide-react';
 

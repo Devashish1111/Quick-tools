@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useCallback } from 'react';
 import { Copy, Check } from 'lucide-react';
 import MD5 from 'crypto-js/md5';

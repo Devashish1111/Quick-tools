@@ -1,15 +1,19 @@
+'use client';
 import { useState, useMemo } from 'react';
 import { Search, Zap, X, ArrowUpRight, Sparkles } from 'lucide-react';
 import { categories, tools } from '../tools/toolsConfig';
+
+import { User } from '@supabase/supabase-js';
 
 interface SidebarProps {
   activeTool: string;
   onSelectTool: (id: string) => void;
   isOpen: boolean;
   onClose: () => void;
+  user?: User | null;
 }
 
-export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose }: SidebarProps) {
+export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose, user }: SidebarProps) {
   const [search, setSearch] = useState('');
 
   const filteredTools = useMemo(() => {
@@ -44,7 +48,7 @@ export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose }: S
           borderRight: '1px solid rgba(255,255,255,0.06)',
         }}
       >
-        {/* ── Logo ── */}
+        {/* -- Logo -- */}
         <div
           className="flex items-center justify-between px-5 h-16 flex-shrink-0"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
@@ -74,7 +78,7 @@ export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose }: S
           </button>
         </div>
 
-        {/* ── Search ── */}
+        {/* -- Search -- */}
         <div className="px-3 pt-4 pb-2 flex-shrink-0">
           <div className="relative">
             <Search
@@ -104,7 +108,7 @@ export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose }: S
           </div>
         </div>
 
-        {/* ── Tool list ── */}
+        {/* -- Tool list -- */}
         <nav className="flex-1 overflow-y-auto sidebar-scroll px-3 py-2">
           {search && filteredTools.length === 0 && (
             <div className="text-center py-8">
@@ -192,7 +196,7 @@ export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose }: S
           })}
         </nav>
 
-        {/* ── Premium CTA ── */}
+        {/* -- Premium CTA -- */}
         <div className="p-3 flex-shrink-0" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <div
             className="rounded-2xl p-4 relative overflow-hidden"

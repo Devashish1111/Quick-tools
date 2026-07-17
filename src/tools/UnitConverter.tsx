@@ -1,3 +1,4 @@
+'use client';
 import { useState, useMemo } from 'react';
 
 const CATEGORIES: Record<string, { name: string; units: Record<string, { name: string; toBase: number }> }> = {

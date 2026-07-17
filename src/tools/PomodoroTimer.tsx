@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, RotateCcw, Settings, Bell, BellOff, Coffee, Zap, BookOpen } from 'lucide-react';
 

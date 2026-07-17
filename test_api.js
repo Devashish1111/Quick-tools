@@ -1,0 +1,1 @@
+fetch('http://localhost:3000/api/shorten', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: 'https://google.com' }) }).then(res => res.text()).then(text => console.log(text.substring(0, 3000))).catch(console.error);

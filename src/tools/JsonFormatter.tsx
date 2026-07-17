@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Copy, Check, Wand2, Minimize2 } from 'lucide-react';
 
