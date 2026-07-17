@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 import Home from './pages/Home.tsx'
+import BlogArticle from './pages/BlogArticle.tsx'
 
 // Placeholder components for new routes
 const ComingSoon = ({ title }: { title: string }) => (
@@ -24,7 +25,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/app" element={<Navigate to="/tools/url-shortener" replace />} />
         <Route path="/tools/:toolId" element={<App />} />
         <Route path="/blog" element={<ComingSoon title="Blog" />} />
-        <Route path="/blog/:slug" element={<ComingSoon title="Blog Article" />} />
+        <Route path="/blog/:slug" element={<BlogArticle />} />
         <Route path="/premium" element={<ComingSoon title="Premium" />} />
       </Routes>
     </BrowserRouter>
