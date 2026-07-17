@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Pricing from '@/components/Pricing';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations/FadeIn';
 import { MouseGlow } from '@/components/animations/MouseGlow';
-import { motion } from 'framer-motion';
 import {
   Zap, Shield, Smartphone, ArrowRight, Github,
   Menu, X, CheckCircle, ArrowUpRight, ChevronRight
@@ -358,14 +357,7 @@ export default function Home() {
         <section className="relative min-h-[100dvh] flex flex-col pt-32 pb-24 px-6 md:px-12 overflow-hidden"
           style={{ background: '#09090E' }}>
 
-          {/* SVG grain texture */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.3 }}>
-            <filter id="grain">
-              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-              <feColorMatrix type="saturate" values="0" />
-            </filter>
-            <rect width="100%" height="100%" filter="url(#grain)" style={{ opacity: 0.12 }} />
-          </svg>
+          {/* SVG grain texture removed for performance (LCP) */}
 
           {/* Ghost background number with parallax */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -399,15 +391,15 @@ export default function Home() {
 
             {/* Headline */}
             <div className="mb-8">
-              <div className="text-reveal-wrap is-visible" style={{ transitionDelay: '0.2s' }}>
-                <h1 className="text-reveal-inner font-display font-black leading-[0.88] tracking-tight block"
-                  style={{ fontSize: 'clamp(4rem, 11vw, 10rem)', color: 'var(--qt-text)', letterSpacing: '-0.05em', transitionDelay: '0.25s' }}>
+              <div className="overflow-hidden">
+                <h1 className="font-display font-black leading-[0.88] tracking-tight block"
+                  style={{ fontSize: 'clamp(4rem, 11vw, 10rem)', color: 'var(--qt-text)', letterSpacing: '-0.05em' }}>
                   Every Tool
                 </h1>
               </div>
-              <div className="text-reveal-wrap is-visible" style={{ transitionDelay: '0.35s' }}>
-                <h1 className="text-reveal-inner font-display font-black leading-[0.88] tracking-tight block"
-                  style={{ fontSize: 'clamp(4rem, 11vw, 10rem)', color: 'var(--qt-accent)', letterSpacing: '-0.05em', transitionDelay: '0.45s' }}>
+              <div className="overflow-hidden">
+                <h1 className="font-display font-black leading-[0.88] tracking-tight block animate-fade-up"
+                  style={{ fontSize: 'clamp(4rem, 11vw, 10rem)', color: 'var(--qt-accent)', letterSpacing: '-0.05em' }}>
                   You'll Ever Need.
                 </h1>
               </div>
