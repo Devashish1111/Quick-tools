@@ -1,8 +1,0 @@
-1:"$Sreact.fragment"
-2:I[98675,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/3teniqsj9qtgl.js","/_next/static/chunks/2qziash6jer35.js"],"ToolErrorBoundary"]
-3:I[52157,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/3teniqsj9qtgl.js","/_next/static/chunks/2qziash6jer35.js"],"PreloadChunks"]
-4:I[8100,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/3teniqsj9qtgl.js","/_next/static/chunks/2qziash6jer35.js"],"default"]
-5:I[97367,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
-6:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"Image to Base64\",\"url\":\"https://kwiktoolbox.com/tools/image-to-base64\",\"description\":\"Convert any image file to a Base64 data URL right in your browser.\",\"applicationCategory\":\"UtilitiesApplication\",\"operatingSystem\":\"Web\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"USD\"}}"}}],["$","$L2",null,{"children":[["$","$L3",null,{"moduleIds":["2276553865673973138"]}],["$","$L4",null,{}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/2qziash6jer35.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"L3aPbm8oZmA4uk4vams1b"}
-7:null
