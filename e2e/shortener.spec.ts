@@ -2,6 +2,9 @@ import { test, expect } from '@playwright/test';
 
 test.describe('URL Shortener', () => {
   test('should create a short URL and redirect properly', async ({ page }) => {
+    // Skip in CI as it requires a live Supabase DB, which isn't available with mock credentials
+    test.skip(!!process.env.CI, 'Requires live Supabase database');
+
     // Navigate to URL shortener tool
     await page.goto('/tools/url-shortener');
     
