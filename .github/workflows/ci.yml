@@ -30,6 +30,9 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_APP_URL: http://localhost:3000
+          NEXT_PUBLIC_SUPABASE_URL: https://ircivokqqnwkmcpvbwwe.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: dummy_anon_key
+          STRIPE_SECRET_KEY: dummy_stripe_key
 
       - name: Run Playwright E2E Tests
         run: npx playwright test

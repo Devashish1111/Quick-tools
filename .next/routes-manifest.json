@@ -104,6 +104,12 @@
       "namedRegex": "^/api/checkout(?:/)?$"
     },
     {
+      "page": "/api/health",
+      "regex": "^/api/health(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/health(?:/)?$"
+    },
+    {
       "page": "/api/shorten",
       "regex": "^/api/shorten(?:/)?$",
       "routeKeys": {},
