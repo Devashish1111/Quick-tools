@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install Dependencies
         run: npm ci --legacy-peer-deps
@@ -32,7 +32,11 @@ jobs:
           NEXT_PUBLIC_APP_URL: http://localhost:3000
           NEXT_PUBLIC_SUPABASE_URL: https://ircivokqqnwkmcpvbwwe.supabase.co
           NEXT_PUBLIC_SUPABASE_ANON_KEY: dummy_anon_key
+          SUPABASE_SERVICE_ROLE_KEY: dummy_service_role_key
           STRIPE_SECRET_KEY: dummy_stripe_key
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: dummy_stripe_pub_key
+          STRIPE_WEBHOOK_SECRET: dummy_stripe_webhook_secret
+          STRIPE_PRO_PRICE_ID: dummy_price_id
 
       - name: Run Playwright E2E Tests
         run: npx playwright test
