@@ -62,7 +62,7 @@ export default function Sidebar({ activeTool, onSelectTool, isOpen, onClose, use
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-sm font-bold font-display block" style={{ color: 'var(--qt-text)' }}>
-                QuickToolbox
+                KwikToolbox
               </span>
               <span className="text-[10px] font-medium" style={{ color: 'var(--qt-text-tertiary)' }}>
                 25 Free Online Tools

@@ -12,7 +12,7 @@ export default function RegexTester() {
   const [pattern, setPattern] = useState('\\b\\w+@\\w+\\.\\w+\\b');
   const [flags, setFlags] = useState({ g: true, i: false, m: false });
   const [testString, setTestString] = useState(
-    'Reach us at hello@quicktoolbox.app or support@example.com for help.\nOr visit our docs at docs@example.org'
+    'Reach us at hello@kwiktoolbox.app or support@example.com for help.\nOr visit our docs at docs@example.org'
   );
   const [copied, setCopied] = useState(false);
 

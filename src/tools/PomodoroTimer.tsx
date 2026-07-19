@@ -93,7 +93,7 @@ export default function PomodoroTimer() {
   // Update document title
   useEffect(() => {
     document.title = running ? `${formatTime(timeLeft)} — ${phaseConfig.label}` : 'Pomodoro Timer';
-    return () => { document.title = 'QuickToolbox'; };
+    return () => { document.title = 'KwikToolbox'; };
   }, [timeLeft, running, phaseConfig.label]);
 
   const reset = () => {

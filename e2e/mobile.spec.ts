@@ -5,7 +5,7 @@ test.describe('Mobile Rendering', () => {
   test('should render properly on Mobile Chrome', async ({ page }) => {
     await page.goto('/');
     const title = await page.title();
-    expect(title).toContain('QuickToolbox');
+    expect(title).toContain('KwikToolbox');
     
     // Ensure content is visible and no blank white screen
     const heroText = page.locator('h1').first();

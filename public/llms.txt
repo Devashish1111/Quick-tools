@@ -1,10 +1,10 @@
-# QuickToolbox
+# KwikToolbox
 
 > 25 free, privacy-first online tools running entirely in your browser. No signup. No tracking. Instant results.
 
 ## About
 
-QuickToolbox is a free web application providing 25+ developer and productivity tools. All tools run client-side in the browser with zero server-side processing for maximum privacy and speed.
+KwikToolbox is a free web application providing 25+ developer and productivity tools. All tools run client-side in the browser with zero server-side processing for maximum privacy and speed.
 
 ## Tools
 

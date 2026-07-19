@@ -72,7 +72,7 @@ console.log(greeting);
 
 > This is a blockquote. Great for callouts.
 
-[Visit QuickToolbox](https://quicktoolbox.app)
+[Visit KwikToolbox](https://kwiktoolbox.app)
 
 ---
 

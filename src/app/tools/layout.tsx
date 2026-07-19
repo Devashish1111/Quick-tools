@@ -76,7 +76,7 @@ export default function ToolsLayout({ children }: { children: React.ReactNode })
               <Zap className="w-4 h-4 text-black" />
             </div>
             <span className="text-sm font-bold font-display" style={{ color: 'var(--qt-text)' }}>
-              QuickToolbox
+              KwikToolbox
             </span>
           </Link>
 
@@ -186,13 +186,13 @@ export default function ToolsLayout({ children }: { children: React.ReactNode })
                 <div className="w-5 h-5 rounded-md flex items-center justify-center" style={{ background: 'var(--qt-accent)' }}>
                   <Zap className="w-3 h-3 text-black" />
                 </div>
-                <span className="text-xs font-semibold font-display" style={{ color: 'var(--qt-text-secondary)' }}>QuickToolbox</span>
+                <span className="text-xs font-semibold font-display" style={{ color: 'var(--qt-text-secondary)' }}>KwikToolbox</span>
               </div>
               <p className="text-xs" style={{ color: 'var(--qt-text-muted)' }}>
                 Free online tools. No signup. No tracking. 100% private.
               </p>
               <p className="text-xs mt-1" style={{ color: 'var(--qt-text-muted)' }}>
-                © 2025 QuickToolbox. All rights reserved.
+                © 2025 KwikToolbox. All rights reserved.
               </p>
             </footer>
           </div>

@@ -28,11 +28,11 @@ Call log:
 - generic [ref=e1]:
   - generic [ref=e2]:
     - complementary [ref=e3]:
-      - link "QuickToolbox 25 Free Online Tools" [ref=e5] [cursor=pointer]:
+      - link "KwikToolbox 25 Free Online Tools" [ref=e5] [cursor=pointer]:
         - /url: /
         - img [ref=e7]
         - generic [ref=e9]:
-          - generic [ref=e10]: QuickToolbox
+          - generic [ref=e10]: KwikToolbox
           - text: 25 Free Online Tools
       - generic [ref=e12]:
         - img
@@ -50,10 +50,10 @@ Call log:
           - img [ref=e27]
     - main [ref=e31]:
       - generic [ref=e32]:
-        - link "QuickToolbox" [ref=e33] [cursor=pointer]:
+        - link "KwikToolbox" [ref=e33] [cursor=pointer]:
           - /url: /
           - img [ref=e35]
-          - generic [ref=e37]: QuickToolbox
+          - generic [ref=e37]: KwikToolbox
         - generic [ref=e39]:
           - img [ref=e41]
           - generic [ref=e44]:
@@ -88,9 +88,9 @@ Call log:
         - generic [ref=e84]:
           - generic [ref=e85]:
             - img [ref=e87]
-            - generic [ref=e89]: QuickToolbox
+            - generic [ref=e89]: KwikToolbox
           - paragraph [ref=e90]: Free online tools. No signup. No tracking. 100% private.
-          - paragraph [ref=e91]: © 2025 QuickToolbox. All rights reserved.
+          - paragraph [ref=e91]: © 2025 KwikToolbox. All rights reserved.
   - alert [ref=e92]
 ```
 

@@ -37,13 +37,13 @@ export async function generateMetadata({ params }: { params: Promise<{ toolId: s
   if (!activeTool) return {};
   
   return {
-    title: `${activeTool.name} — Free Online Tool | QuickToolbox`,
+    title: `${activeTool.name} — Free Online Tool | KwikToolbox`,
     description: `${activeTool.description} Free, instant, no signup. Works entirely in your browser.`,
     alternates: {
       canonical: `/tools/${toolId}`,
     },
     openGraph: {
-      title: `${activeTool.name} — QuickToolbox`,
+      title: `${activeTool.name} — KwikToolbox`,
       description: activeTool.description,
       url: `/tools/${toolId}`,
       type: 'website',

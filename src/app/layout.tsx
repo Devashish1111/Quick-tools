@@ -32,10 +32,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kwiktoolbox.com'),
-  title: 'QuickToolbox — 25 Free Online Tools for Developers & Designers',
+  title: 'KwikToolbox — 25 Free Online Tools for Developers & Designers',
   description: '25 free browser tools: URL shortener, QR code generator, password generator, JSON formatter, regex tester, markdown preview, and more. Instant, private, no signup required.',
   keywords: 'free online tools, URL shortener, QR code generator, password generator, JSON formatter, regex tester, markdown preview, base64 encoder, UUID generator, hash generator, CSS gradient generator, color converter, pomodoro timer, IP lookup, word counter',
-  authors: [{ name: 'QuickToolbox' }],
+  authors: [{ name: 'KwikToolbox' }],
   robots: 'index, follow',
   alternates: {
     canonical: '/',
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'QuickToolbox — 25 Free Online Tools',
+    title: 'KwikToolbox — 25 Free Online Tools',
     description: 'URL shortener, QR codes, passwords, JSON formatter, regex tester, markdown preview & 19 more tools. All free. No signup. Private.',
-    siteName: 'QuickToolbox',
+    siteName: 'KwikToolbox',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@quicktoolbox',
-    title: 'QuickToolbox — 25 Free Online Tools',
+    site: '@kwiktoolbox',
+    title: 'KwikToolbox — 25 Free Online Tools',
     description: 'URL shortener, QR codes, passwords, JSON formatter, regex tester & more. Private, instant, free.',
   },
 };
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  'name': 'QuickToolbox',
+  'name': 'KwikToolbox',
   'url': 'https://kwiktoolbox.com',
   'description': '25 free browser tools: URL shortener, QR code generator, password generator, JSON formatter, and more. Instant, private, no signup.',
   'applicationCategory': 'UtilitiesApplication',
@@ -71,7 +71,7 @@ const jsonLd = {
   },
   'author': {
     '@type': 'Organization',
-    'name': 'QuickToolbox',
+    'name': 'KwikToolbox',
   },
 };
 

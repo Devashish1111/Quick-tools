@@ -17,7 +17,7 @@ import { tools as allTools } from '../tools/toolsConfig';
 function CustomCursor() {
   // Reset SEO to home page values on mount
   useEffect(() => {
-    document.title = "QuickToolbox — 25 Free Online Tools for Developers & Designers";
+    document.title = "KwikToolbox — 25 Free Online Tools for Developers & Designers";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute('content', "25 free browser tools: URL shortener, QR code generator, password generator, JSON formatter, regex tester, markdown preview, and more. Instant, private, no signup required.");
@@ -304,7 +304,7 @@ export default function Home() {
                 style={{ background: 'var(--qt-accent)' }}>
                 <Zap className="w-3.5 h-3.5 text-black" />
               </div>
-              <span className="text-sm font-bold font-display tracking-tight" style={{ color: 'var(--qt-text)' }}>QuickToolbox</span>
+              <span className="text-sm font-bold font-display tracking-tight" style={{ color: 'var(--qt-text)' }}>KwikToolbox</span>
             </a>
 
             <div className="hidden md:flex items-center gap-8">
@@ -596,7 +596,7 @@ export default function Home() {
             <div className="mb-20">
               <span data-reveal className="text-xs font-black uppercase tracking-widest block mb-3"
                 style={{ color: 'var(--qt-text-muted)', letterSpacing: '0.15em' }}>
-                Why QuickToolbox
+                Why KwikToolbox
               </span>
               <div className="overflow-hidden">
                 <h2 data-reveal="clip" className="font-display font-black tracking-tight"
@@ -721,7 +721,7 @@ export default function Home() {
               itemListElement: blogPosts.map((p, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: `https://quicktoolbox.app/blog/${p.slug}`,
+                url: `https://kwiktoolbox.app/blog/${p.slug}`,
                 name: p.title,
               })),
             }) }} />
@@ -819,7 +819,7 @@ export default function Home() {
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'var(--qt-accent)' }}>
                   <Zap className="w-3.5 h-3.5 text-black" />
                 </div>
-                <span className="font-display font-bold text-sm" style={{ color: 'var(--qt-text)' }}>QuickToolbox</span>
+                <span className="font-display font-bold text-sm" style={{ color: 'var(--qt-text)' }}>KwikToolbox</span>
               </div>
               <p className="text-xs leading-relaxed" style={{ color: 'var(--qt-text-muted)', maxWidth: '260px' }}>
                 Free online tools for developers, designers, and writers. Private, instant, forever free.
@@ -866,7 +866,7 @@ export default function Home() {
 
           <div className="max-w-7xl mx-auto mt-16 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
             style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-            <p className="text-xs" style={{ color: 'var(--qt-text-muted)' }}>© 2025 QuickToolbox. All rights reserved.</p>
+            <p className="text-xs" style={{ color: 'var(--qt-text-muted)' }}>© 2025 KwikToolbox. All rights reserved.</p>
             <p className="text-xs" style={{ color: 'var(--qt-text-muted)' }}>Made with precision. Runs in your browser.</p>
           </div>
         </footer>
@@ -875,12 +875,12 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'QuickToolbox',
-          url: 'https://quicktoolbox.app',
+          name: 'KwikToolbox',
+          url: 'https://kwiktoolbox.app',
           description: '25 free online tools — URL shortener, QR code generator, password generator, JSON formatter, and more. All private, browser-side, no signup.',
           potentialAction: {
             '@type': 'SearchAction',
-            target: 'https://quicktoolbox.app/app?q={search_term_string}',
+            target: 'https://kwiktoolbox.app/app?q={search_term_string}',
             'query-input': 'required name=search_term_string',
           },
         }) }} />

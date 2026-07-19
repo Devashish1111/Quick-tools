@@ -20,7 +20,7 @@ export default function QrCodeGenerator() {
     const canvas = canvasRef.current.querySelector('canvas');
     if (!canvas) return;
     const link = document.createElement('a');
-    link.download = 'quicktoolbox-qr.png';
+    link.download = 'kwiktoolbox-qr.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
   }, []);

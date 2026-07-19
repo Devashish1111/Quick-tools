@@ -2,7 +2,7 @@ import fs from 'fs';
 import { tools } from './src/tools/toolsConfig.js';
 import { blogPosts } from './src/data/blogs.js';
 
-const DOMAIN = 'https://quicktoolbox.app';
+const DOMAIN = 'https://kwiktoolbox.app';
 
 const urls = [
   { loc: `${DOMAIN}/`, changefreq: 'daily', priority: '1.0' },

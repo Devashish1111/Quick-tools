@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
   
   return {
-    title: `${post.title} — QuickToolbox Blog`,
+    title: `${post.title} — KwikToolbox Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,

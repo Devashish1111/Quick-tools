@@ -1,4 +1,4 @@
-const CACHE_NAME = 'quicktoolbox-v1';
+const CACHE_NAME = 'kwiktoolbox-v1';
 const PRECACHE_URLS = [
   '/',
   '/offline',
