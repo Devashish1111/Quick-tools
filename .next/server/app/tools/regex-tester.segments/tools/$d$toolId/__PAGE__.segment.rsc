@@ -1,0 +1,8 @@
+1:"$Sreact.fragment"
+2:I[98675,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/090jk_tccu56q.js","/_next/static/chunks/2f10usd9iofwg.js"],"ToolErrorBoundary"]
+3:I[52157,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/090jk_tccu56q.js","/_next/static/chunks/2f10usd9iofwg.js"],"PreloadChunks"]
+4:I[38731,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/08l0rutkin0nl.js","/_next/static/chunks/090jk_tccu56q.js","/_next/static/chunks/2f10usd9iofwg.js"],"default"]
+5:I[97367,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"Regex Tester\",\"url\":\"https://kwiktoolbox.com/tools/regex-tester\",\"description\":\"Test regular expressions against strings with real-time match highlighting.\",\"applicationCategory\":\"UtilitiesApplication\",\"operatingSystem\":\"Web\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"USD\"}}"}}],["$","$L2",null,{"children":[["$","$L3",null,{"moduleIds":["2891726505987803473"]}],["$","$L4",null,{}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/2f10usd9iofwg.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SQl4cxxCbMGs5k9cMUIlV"}
+7:null

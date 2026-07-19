@@ -37,8 +37,17 @@ export async function generateMetadata({ params }: { params: Promise<{ toolId: s
   if (!activeTool) return {};
   
   return {
-    title: `${activeTool.name} — QuickToolbox Free Online Tool`,
-    description: activeTool.description,
+    title: `${activeTool.name} — Free Online Tool | QuickToolbox`,
+    description: `${activeTool.description} Free, instant, no signup. Works entirely in your browser.`,
+    alternates: {
+      canonical: `/tools/${toolId}`,
+    },
+    openGraph: {
+      title: `${activeTool.name} — QuickToolbox`,
+      description: activeTool.description,
+      url: `/tools/${toolId}`,
+      type: 'website',
+    },
   };
 }
 
@@ -51,14 +60,37 @@ export function generateStaticParams() {
 export default async function ToolPage({ params }: { params: Promise<{ toolId: string }> }) {
   const { toolId } = await params;
   const ActiveComponent = directComponents[toolId];
+  const activeTool = tools.find((t) => t.id === toolId);
   
-  if (!ActiveComponent) {
+  if (!ActiveComponent || !activeTool) {
     notFound();
   }
 
+  const toolJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    'name': activeTool.name,
+    'url': `https://kwiktoolbox.com/tools/${toolId}`,
+    'description': activeTool.description,
+    'applicationCategory': 'UtilitiesApplication',
+    'operatingSystem': 'Web',
+    'offers': {
+      '@type': 'Offer',
+      'price': '0',
+      'priceCurrency': 'USD',
+    },
+  };
+
   return (
-    <ToolErrorBoundary>
-      <ActiveComponent />
-    </ToolErrorBoundary>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
+      />
+      <ToolErrorBoundary>
+        <ActiveComponent />
+      </ToolErrorBoundary>
+    </>
   );
 }
+

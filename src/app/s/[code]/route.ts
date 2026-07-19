@@ -34,6 +34,13 @@ export async function GET(
     .eq('id', data.id)
     .then()
 
-  // Redirect to the original URL
-  return NextResponse.redirect(data.original_url)
+  // Redirect to the original URL with 301 (Permanent Redirect)
+  const targetUrl = data.original_url;
+  
+  // Prevent open redirect abuse (e.g. javascript: or data: URIs)
+  if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
+    return NextResponse.redirect(new URL('/', request.url), 302);
+  }
+
+  return NextResponse.redirect(targetUrl, 301)
 }

@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /s/
+Disallow: /login
 
-Sitemap: https://quicktoolbox.app/sitemap.xml
+Sitemap: https://kwiktoolbox.com/sitemap.xml

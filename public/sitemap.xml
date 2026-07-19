@@ -1,153 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quicktoolbox.app/</loc>
+    <loc>https://kwiktoolbox.com/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/url-shortener</loc>
+    <loc>https://kwiktoolbox.com/tools/url-shortener</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/qr-code</loc>
+    <loc>https://kwiktoolbox.com/tools/qr-code</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/ip-info</loc>
+    <loc>https://kwiktoolbox.com/tools/ip-info</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/case-converter</loc>
+    <loc>https://kwiktoolbox.com/tools/case-converter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/word-counter</loc>
+    <loc>https://kwiktoolbox.com/tools/word-counter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/lorem-ipsum</loc>
+    <loc>https://kwiktoolbox.com/tools/lorem-ipsum</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/text-slug</loc>
+    <loc>https://kwiktoolbox.com/tools/text-slug</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/base64</loc>
+    <loc>https://kwiktoolbox.com/tools/base64</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/json-formatter</loc>
+    <loc>https://kwiktoolbox.com/tools/markdown-preview</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/uuid</loc>
+    <loc>https://kwiktoolbox.com/tools/json-formatter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/timestamp</loc>
+    <loc>https://kwiktoolbox.com/tools/uuid-generator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/hash</loc>
+    <loc>https://kwiktoolbox.com/tools/timestamp-converter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/percentage</loc>
+    <loc>https://kwiktoolbox.com/tools/hash-generator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/random</loc>
+    <loc>https://kwiktoolbox.com/tools/regex-tester</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/age</loc>
+    <loc>https://kwiktoolbox.com/tools/password-generator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/bmi</loc>
+    <loc>https://kwiktoolbox.com/tools/percentage-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/unit</loc>
+    <loc>https://kwiktoolbox.com/tools/random-number</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/color</loc>
+    <loc>https://kwiktoolbox.com/tools/age-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/image-base64</loc>
+    <loc>https://kwiktoolbox.com/tools/bmi-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/markdown-preview</loc>
+    <loc>https://kwiktoolbox.com/tools/unit-converter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/css-gradient</loc>
+    <loc>https://kwiktoolbox.com/tools/color-converter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/regex-tester</loc>
+    <loc>https://kwiktoolbox.com/tools/image-to-base64</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/tools/pomodoro</loc>
+    <loc>https://kwiktoolbox.com/tools/css-gradient</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://quicktoolbox.app/blog/how-to-generate-qr-code-free-online</loc>
+    <loc>https://kwiktoolbox.com/tools/pomodoro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwiktoolbox.com/blog/how-to-generate-qr-code-free-online</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/blog/strong-password-generator-guide</loc>
+    <loc>https://kwiktoolbox.com/blog/strong-password-generator-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/blog/url-shortener-how-it-works</loc>
+    <loc>https://kwiktoolbox.com/blog/url-shortener-how-it-works</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/blog/json-formatter-online-guide</loc>
+    <loc>https://kwiktoolbox.com/blog/json-formatter-online-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/blog/markdown-preview-online-complete-guide</loc>
+    <loc>https://kwiktoolbox.com/blog/markdown-preview-online-complete-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quicktoolbox.app/blog/regex-tester-online-beginners-guide</loc>
+    <loc>https://kwiktoolbox.com/blog/regex-tester-online-beginners-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

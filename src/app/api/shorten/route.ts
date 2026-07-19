@@ -4,11 +4,40 @@ import crypto from 'crypto'
 import { z } from 'zod'
 
 const shortenSchema = z.object({
-  url: z.string().url('Please provide a valid URL to shorten'),
+  url: z.string().url('Please provide a valid URL to shorten')
+    .refine((url) => {
+      try {
+        const parsed = new URL(url);
+        return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+      } catch {
+        return false;
+      }
+    }, 'Only HTTP and HTTPS URLs are allowed'),
 })
+
+// Basic in-memory rate limiting (per-instance)
+const rateLimitMap = new Map<string, { count: number, timestamp: number }>();
+const RATE_LIMIT_MAX = 10;
+const RATE_LIMIT_WINDOW_MS = 60000;
 
 export async function POST(request: Request) {
   try {
+    // Apply rate limit
+    const ip = request.headers.get('x-forwarded-for') || 'anonymous';
+    const now = Date.now();
+    const rateRecord = rateLimitMap.get(ip) || { count: 0, timestamp: now };
+    
+    if (now - rateRecord.timestamp > RATE_LIMIT_WINDOW_MS) {
+      rateRecord.count = 1;
+      rateRecord.timestamp = now;
+    } else {
+      rateRecord.count++;
+      if (rateRecord.count > RATE_LIMIT_MAX) {
+        return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 });
+      }
+    }
+    rateLimitMap.set(ip, rateRecord);
+
     let body;
     try {
       body = await request.json()

@@ -83,7 +83,9 @@
     background-color: var(--qt-bg);
     color: var(--qt-text);
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
+    min-height: 100vh;
   }
 
   ::selection {

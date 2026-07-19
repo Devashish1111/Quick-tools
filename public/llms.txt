@@ -1,20 +1,53 @@
 # QuickToolbox
 
-> The fastest, most reliable toolbox on the web.
+> 25 free, privacy-first online tools running entirely in your browser. No signup. No tracking. Instant results.
 
 ## About
-QuickToolbox provides 25+ browser-side tools spanning Text, Network, Conversion, Generators, and Crypto. 
-Everything is extremely fast and privacy-first.
 
-## Tools Overview
-- URL Shortener
-- Strong Password Generator
-- Image Resizer
-- IP Info Lookup
-- QR Code Generator
-- And many more...
+QuickToolbox is a free web application providing 25+ developer and productivity tools. All tools run client-side in the browser with zero server-side processing for maximum privacy and speed.
 
-## Additional Resources
-- [Home Page](/)
-- [All Tools](/tools)
-- [Blog](/blog)
+## Tools
+
+### Web Tools
+- [URL Shortener](https://kwiktoolbox.com/tools/url-shortener): Shorten long URLs into clean, shareable links
+- [QR Code Generator](https://kwiktoolbox.com/tools/qr-code): Generate scannable QR codes from text or URLs
+- [IP Info Lookup](https://kwiktoolbox.com/tools/ip-info): Look up geolocation and ISP info for any IP
+
+### Text & Writing
+- [Case Converter](https://kwiktoolbox.com/tools/case-converter): Transform text between cases (upper, lower, title, camel, snake)
+- [Word Counter](https://kwiktoolbox.com/tools/word-counter): Count words, characters, sentences, and estimate reading time
+- [Lorem Ipsum Generator](https://kwiktoolbox.com/tools/lorem-ipsum): Generate placeholder text for designs
+- [Text to Slug](https://kwiktoolbox.com/tools/text-slug): Convert text into URL-friendly slugs
+- [Base64 Encode/Decode](https://kwiktoolbox.com/tools/base64): Encode or decode Base64 text
+- [Markdown Preview](https://kwiktoolbox.com/tools/markdown-preview): Write Markdown with live HTML preview
+
+### Developer
+- [JSON Formatter](https://kwiktoolbox.com/tools/json-formatter): Beautify, minify, and validate JSON
+- [UUID Generator](https://kwiktoolbox.com/tools/uuid-generator): Generate random UUID v4 identifiers
+- [Timestamp Converter](https://kwiktoolbox.com/tools/timestamp-converter): Convert Unix timestamps to dates
+- [Hash Generator](https://kwiktoolbox.com/tools/hash-generator): Generate MD5, SHA-1, SHA-256, SHA-512 hashes
+- [Regex Tester](https://kwiktoolbox.com/tools/regex-tester): Test regular expressions with match highlighting
+
+### Security
+- [Password Generator](https://kwiktoolbox.com/tools/password-generator): Create strong, secure passwords
+
+### Calculators
+- [Percentage Calculator](https://kwiktoolbox.com/tools/percentage-calculator): Calculate percentages and percentage change
+- [Random Number Generator](https://kwiktoolbox.com/tools/random-number): Generate random numbers in a range
+- [Age Calculator](https://kwiktoolbox.com/tools/age-calculator): Calculate exact age from birthdate
+- [BMI Calculator](https://kwiktoolbox.com/tools/bmi-calculator): Calculate Body Mass Index
+- [Unit Converter](https://kwiktoolbox.com/tools/unit-converter): Convert length, weight, temperature, storage units
+
+### Utilities
+- [Color Converter](https://kwiktoolbox.com/tools/color-converter): Convert between HEX, RGB, HSL
+- [Image to Base64](https://kwiktoolbox.com/tools/image-to-base64): Convert images to Base64 data URLs
+- [CSS Gradient Generator](https://kwiktoolbox.com/tools/css-gradient): Build CSS gradients visually
+- [Pomodoro Timer](https://kwiktoolbox.com/tools/pomodoro): Stay focused with Pomodoro intervals
+
+## Blog
+- [How to Generate QR Codes Free Online](https://kwiktoolbox.com/blog/how-to-generate-qr-code-free-online)
+- [Strong Password Generator Guide](https://kwiktoolbox.com/blog/strong-password-generator-guide)
+- [URL Shortener: How It Works](https://kwiktoolbox.com/blog/url-shortener-how-it-works)
+- [JSON Formatter Online Guide](https://kwiktoolbox.com/blog/json-formatter-online-guide)
+- [Markdown Preview Complete Guide](https://kwiktoolbox.com/blog/markdown-preview-online-complete-guide)
+- [Regex Tester Beginners Guide](https://kwiktoolbox.com/blog/regex-tester-online-beginners-guide)
